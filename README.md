@@ -1,4 +1,4 @@
-# todotable
+# Todotable
 App for to do list
 
 # Technologies
@@ -9,6 +9,6 @@ App for to do list
 - Class and function components
 - State and props
 
-# troubleshooted
+# Troubleshooted
 - props undefined error
 - extensions error
