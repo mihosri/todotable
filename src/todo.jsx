@@ -18,11 +18,7 @@ const TableBody = (props) => {
         <tr key={index}>
           <td>{task}</td>
           <td>
-            <button
-              onClick={() => {
-                deleteTaskFunc(index)
-              }}
-            >
+            <button onClick={() => deleteTaskFunc(index) }>
               Delete
             </button>
           </td>

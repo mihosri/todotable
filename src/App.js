@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Todo from "./todo";
 
-class App extends Component() 
+class App extends Component
 {
   state = {
     tasks: ["study","cook","work","sing","laundry","clean"]
@@ -19,9 +19,10 @@ class App extends Component()
   }
 
   render(){
+    const {tasks} = this.state
     return (
       <div>
-        <Todo deleteTaskFunc={this.deleteTask} taskData={this.state.tasks} />
+        <Todo deleteTaskFunc={this.deleteTask} taskData={tasks} />
       </div>
     )
   }
