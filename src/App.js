@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Todo from "./todo";
+import Todo from "./Todo";
 
 class App extends Component {
   /**
@@ -8,7 +8,7 @@ class App extends Component {
    * @memberof App
    */
   state = {
-    tasks: ['study', 'cook', 'work', 'sing', 'laundry', 'clean'],
+    tasks: [],
   }
 
   /**

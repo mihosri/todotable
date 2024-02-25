@@ -1,3 +1,5 @@
+import AddTask from './AddTask'
+
 const { Component } = require('react')
 /**
  *Heading for the table content
@@ -48,10 +50,13 @@ class Todo extends Component {
     const { deleteTaskFunc, taskData } = this.props
 
     return (
-      <table>  
-        <TableHead/>
-        <TableBody taskData={taskData} deleteTaskFunc={deleteTaskFunc} />      
-      </table>
+      <>
+        <AddTask />
+        <table>
+          <TableHead />
+          <TableBody taskData={taskData} deleteTaskFunc={deleteTaskFunc} />
+        </table>
+      </>
     )
   }
 }
