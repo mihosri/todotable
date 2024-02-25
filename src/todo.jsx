@@ -27,7 +27,7 @@ const TableBody = (props) => {
   const rows = taskData.map((task, index) => {
     return (      
         <tr key={index}>
-          <td>{task}</td>
+          <td>{task.task}</td>
           <td>
             <button onClick={() => deleteTaskFunc(index) }>
               Delete
@@ -47,11 +47,11 @@ const TableBody = (props) => {
  */
 class Todo extends Component {
   render() {
-    const { deleteTaskFunc, taskData } = this.props
+    const { deleteTaskFunc, taskData, handleSubmit } = this.props
 
     return (
       <>
-        <AddTask />
+        <AddTask handleSubmit={handleSubmit} />
         <table>
           <TableHead />
           <TableBody taskData={taskData} deleteTaskFunc={deleteTaskFunc} />

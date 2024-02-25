@@ -26,6 +26,11 @@ class App extends Component {
 
     this.setState({ tasks: filteredData })
   }
+
+  handleSubmit = (task) => {
+    this.setState({tasks: [...this.state.tasks,task]})
+  }
+
 /**
  *App is the parent component to Todo
  *Attaching the state data and deleteTask as props to Todo
@@ -36,7 +41,11 @@ render() {
     const { tasks } = this.state
     return (
       <div>
-        <Todo deleteTaskFunc={this.deleteTask} taskData={tasks} />
+        <Todo
+          deleteTaskFunc={this.deleteTask}
+          taskData={tasks}
+          handleSubmit={this.handleSubmit}
+        />
       </div>
     )
   }
