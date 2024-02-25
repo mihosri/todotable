@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   handleSubmit = (task) => {
-    this.setState({tasks: [...this.state.tasks,task]})
+    this.setState({ tasks: [...this.state.tasks,task] })
   }
 
 /**
