@@ -13,3 +13,11 @@ const taskSlice = createSlice(
         }
     }
 )
+
+//for a reducer to be called and functioned we need action creators
+
+//exporting action creators
+export const { addTask } = taskSlice.actions
+
+//exporting reducer
+export default taskSlice.reducer
