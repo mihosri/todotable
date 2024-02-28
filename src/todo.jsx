@@ -1,4 +1,6 @@
 import AddTask from './AddTask'
+import { useSelector } from 'react-redux'
+import { addTask, deleteTask } from './slices/taskSlice'
 
 const { Component } = require('react')
 
@@ -33,15 +35,17 @@ const TableBody = (props) => {
 
 
 class Todo extends Component {
+
+  tasks = useSelector((state) => state.tasks)
+
   render() {
-    const { deleteTaskFunc, taskData, handleSubmit } = this.props
 
     return (
       <>
         <AddTask handleSubmit={handleSubmit} />
         <table>
           <TableHead />
-          <TableBody taskData={taskData} deleteTaskFunc={deleteTaskFunc} />
+          <TableBody taskData={this.tasks} deleteTaskFunc={deleteTaskFunc} />
         </table>
       </>
     )
