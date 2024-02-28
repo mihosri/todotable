@@ -6,38 +6,20 @@ export class AddTask extends Component {
 
    dispatch = useDispatch()
 
-  /**
-   *This is used to set the state of form back after submitting the data
-   *
-   * @memberof AddTask
-   */
   initialState = {
     task:""
   }
-/**
- *Current state value
- *
- * @memberof AddTask
- */
+
 state = this.initialState
-/**
- *When the user gives input, correspondingly attach it to the state
- *
- * @param {*} event
- * @memberof AddTask
- */
+
 handleChange = (event) => {
 
     // const { name, value } = event.target
-    const {value} = event.target;
+    // this.setState({[name]:value}) 
+    const { value } = event.target
     this.dispatch(addTaskAction(value))
-  //  this.setState({[name]:value}) 
   }
-/**
- *This event handler uses the handleSubmit method from App component through props
- *
- * @memberof AddTask
- */
+
 clickSubmit = () => {
     let task = this.state
     this.props.handleSubmit(task)
