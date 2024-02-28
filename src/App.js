@@ -1,5 +1,7 @@
 import { Component } from "react";
 import Todo from "./Todo";
+import { Provider } from "react-redux";
+import {store} from './store'
 
 class App extends Component {
   /**
@@ -40,13 +42,15 @@ class App extends Component {
 render() {
     const { tasks } = this.state
     return (
-      <div>
-        <Todo
-          deleteTaskFunc={this.deleteTask}
-          taskData={tasks}
-          handleSubmit={this.handleSubmit}
-        />
-      </div>
+      <Provider store={store}>
+        <div>
+          <Todo
+            deleteTaskFunc={this.deleteTask}
+            taskData={tasks}
+            handleSubmit={this.handleSubmit}
+          />
+        </div>
+      </Provider>
     )
   }
 }
