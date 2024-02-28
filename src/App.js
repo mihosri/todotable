@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Todo from "./Todo";
 import { Provider } from "react-redux";
-import {store} from './store'
+import store from './store'
 
 class App extends Component {
   /**

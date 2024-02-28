@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import {addTask as addTaskAction} from './slices/taskSlice'
+import { useDispatch } from 'react-redux'
 
 export class AddTask extends Component {
+
+   dispatch = useDispatch()
 
   /**
    *This is used to set the state of form back after submitting the data
@@ -23,8 +27,11 @@ state = this.initialState
  * @memberof AddTask
  */
 handleChange = (event) => {
-    const {name, value} = event.target;
-   this.setState({[name]:value}) 
+
+    // const { name, value } = event.target
+    const {value} = event.target;
+    this.dispatch(addTaskAction(value))
+  //  this.setState({[name]:value}) 
   }
 /**
  *This event handler uses the handleSubmit method from App component through props
