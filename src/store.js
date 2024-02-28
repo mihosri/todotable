@@ -1,7 +1,12 @@
-import { createStore } from 'redux';
-import {reducer} from './reducer';
+import { configureStore } from '@reduxjs/toolkit'; 
 
-const store = createStore(reducer);
+//reducer is like a state for the store
+
+const store = configureStore({
+    reducer: {
+        tasks: 
+    }
+})
 
 
 
